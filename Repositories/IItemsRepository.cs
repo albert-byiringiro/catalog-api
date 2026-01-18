@@ -12,5 +12,6 @@ namespace Catalog.Repositories
 
         void CreateItem(Item item);
         void UpdateItem(Item item);
+        void DeleteItem(Guid id);
     }
 } 
