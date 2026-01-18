@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using Catalog.Dtos;
 using Catalog.Entities;
 
 namespace Catalog.Repositories
@@ -22,6 +23,11 @@ namespace Catalog.Repositories
         public Item GetItem(Guid id)
         {
             return items.Where(item => item.Id == id).SingleOrDefault();
+        }
+
+        public void CreateItem(Item item)
+        {
+            items.Add(item);
         }
     }
 }
